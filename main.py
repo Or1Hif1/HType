@@ -20,12 +20,13 @@ def replacer(s, linestring, index, fail=False):
 def random_words(length):
     f = open("dictionary.txt", "r")
     l = str(f.read()).split()
+    print(l)
     new_text = ""
     for x in range(int(length/2)):
-        index = random.randint(0, 10000)
+        index = random.randint(0, 2999)
         new_text += l[index] + " "
     for x in range(int(length/2)):
-        index = random.randint(0, 10000)
+        index = random.randint(0, 2999)
         new_text += l[index] + " "
     return new_text
 
