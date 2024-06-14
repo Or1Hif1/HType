@@ -1,21 +1,19 @@
 import pygame
-import keyboard
 import random
 import pygame.freetype
-import time
 pygame.init()
 
 
 def replacer(s, linestring, index, fail=False):
+
     if not fail and index not in range(len(s)):
         raise ValueError("index outside given string")
 
-    if index < 0:  # add it to the beginning
+    if index < 0:
         return linestring + s
-    if index > len(s):  # add it to the end
+    if index > len(s):
         return s + linestring
 
-    # insert the new string between "slices" of the original
     return s[:index] + linestring + s[index + 1:]
 
 
